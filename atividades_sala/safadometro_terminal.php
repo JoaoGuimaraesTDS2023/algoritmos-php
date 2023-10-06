@@ -8,6 +8,9 @@
     $vagabundo = 0;
     #fim variáveis globais.
 
+    safadometro(); #executa o código.
+
+    ###Functions:###
     function safadometro() #function que executa todo o código.
     {
         leia_informacoes();
@@ -85,9 +88,9 @@
         global $anjo, $vagabundo;
 
         echo "Tô namorando todo mundo \n"; sleep(2);
-        echo "$anjo por cento anjo, perfeito \n"; sleep(2);
-        echo "Mas aquele $vagabundo por cento é vagabundo \n"; sleep(2);
-        echo "Mas aquele $vagabundo por cento é vagabundo \n"; sleep(2);
+        echo "$anjo% anjo, perfeito \n"; sleep(2);
+        echo "Mas aquele $vagabundo% é vagabundo \n"; sleep(2);
+        echo "Mas aquele $vagabundo% é vagabundo \n"; sleep(2);
         echo "Safado e elas gostam \n"; sleep(2);
     }
 
@@ -105,5 +108,5 @@
         }
     }
 
-    safadometro(); #executa o código.
+    ###FIM DAS FUNCTIONS###
 ?>
