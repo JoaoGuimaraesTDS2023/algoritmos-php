@@ -48,9 +48,21 @@
         }
     }
 
+    function verifique_ano()
+    {
+        global $ano;
+
+        if(strlen($ano) > 2){
+
+            $ano = substr($ano, (strlen($ano)-2), strlen($ano));
+        }  
+    }
+
     function verifique_nummeros_validos() #function que verifica se os valores númericos são válidos.
     {
         global $dia, $mes, $ano;
+
+        verifique_ano();
 
         #verifica se a "data" informada é válida. Ainda possui erro de verificação, pois não considera a quantidade de dias em um mês em específico.
         if($dia > 31 or $mes > 12 or $ano > 99){
@@ -87,11 +99,11 @@
     {
         global $anjo, $vagabundo;
 
-        echo "Tô namorando todo mundo \n"; sleep(2);
-        echo "$anjo% anjo, perfeito \n"; sleep(2);
-        echo "Mas aquele $vagabundo% é vagabundo \n"; sleep(2);
-        echo "Mas aquele $vagabundo% é vagabundo \n"; sleep(2);
-        echo "Safado e elas gostam \n"; sleep(2);
+        echo "Tô namorando todo mundo \n"; sleep(1);
+        echo "$anjo% anjo, perfeito \n"; sleep(1);
+        echo "Mas aquele $vagabundo% é vagabundo \n"; sleep(1);
+        echo "Mas aquele $vagabundo% é vagabundo \n"; sleep(1);
+        echo "Safado e elas gostam \n"; sleep(1);
     }
 
     function repita() #function que verifica se o usuário deseja testar sua "porcentagem de anjo e vagabundo" novanete.
