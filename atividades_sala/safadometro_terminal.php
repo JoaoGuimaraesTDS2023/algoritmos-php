@@ -13,6 +13,7 @@
     ###Functions:###
     function safadometro() #function que executa todo o código.
     {
+        echo "Descubra sua porcentagem de Anjo e Vagabundo, segundo Wesley Safadão! 100%OFICIAL\n";
         leia_informacoes();
         repita();
     }
