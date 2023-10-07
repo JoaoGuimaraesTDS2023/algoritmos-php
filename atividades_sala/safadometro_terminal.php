@@ -1,4 +1,4 @@
-<?php
+<?php   //TODO Programa que calcula a porcentagem de "anjo" e "vagabundo" de uma pessoa com base na sua data de nascimento.
 
     #variáveis globais:
     $dia = 16;
@@ -44,18 +44,18 @@
 
         }else{
 
-            echo "Digite um número válido! \n"; #caso os valores não sejam números inteiros, ele pede os valores novamente.
+            echo "Um dos valores informados não é válido! \n"; #caso os valores não sejam números inteiros, ele pede os valores novamente.
             leia_informacoes();
         }
     }
 
-    function verifique_ano()
+    function verifique_ano() #function que verifica se o usuário digitou mais de 2 números para se referir ao ano.
     {
         global $ano;
 
         if(strlen($ano) > 2){
 
-            $ano = substr($ano, (strlen($ano)-2), strlen($ano));
+            $ano = substr($ano, (strlen($ano)-2), strlen($ano)); #altera a $ano para ser somente os dois ultimos digitos dela.
         }  
     }
 
@@ -68,7 +68,7 @@
         #verifica se a "data" informada é válida. Ainda possui erro de verificação, pois não considera a quantidade de dias em um mês em específico.
         if($dia > 31 or $mes > 12 or $ano > 99){
 
-            echo "Digite um valor válido e no formato indicado! \n";
+            echo "Um dos valores informados não está em um formato válido! \n";
             leia_informacoes();
 
         }
