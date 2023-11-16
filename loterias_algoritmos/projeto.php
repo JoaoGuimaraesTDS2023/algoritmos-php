@@ -1,6 +1,4 @@
 <?php
-
-    /* erro de loop: funcao da surpresinha se repete varias vezes, pois a chamamos novamente antes dela terminar por completo; */
     
     #Lista constante com os valores de cada realize_aposta.
     const VALORES = array(
@@ -239,7 +237,6 @@
         echo "+==============================+ \n";
         echo " INFORMAÇÕES: \n\n";
         echo "+==============================+ \n";
-
 
     }
 
