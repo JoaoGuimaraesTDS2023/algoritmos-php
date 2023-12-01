@@ -111,8 +111,6 @@
     #Quantidades de dezenas escolhidas pelo usuario.
     $dezena = 0;
 
-
-
     echo "\n Olá, sejá bem vindo ao meu simulador dos principais jogos de loteria do Brasil! \n\n";
     menu_loterias();
 
@@ -126,9 +124,6 @@
         echo " 2. Quina.\n";
         echo " 3. Lotomania.\n";
         echo " 4. Lotofácil.\n\n";
-        echo " 5. SORTEIO \n";
-        echo " 6. INFORMAÇÕES\n";
-        echo " 7. HISTÓRICO. \n\n";
         echo " 0. SAIR.\n\n";
         echo "+==============================+ \n";
 
@@ -143,22 +138,11 @@
             case '3': echo "Você selecionou a Lotomania. \n"; $loteria = "lotomania"; menu_selecao(); break;
             
             case '4': echo "Você selecionou a Lotofácil. \n"; $loteria = "lotofacil"; menu_selecao(); break;
-
-            case '5': echo "Você selecionou o Sorteio. \n"; sorteio(); break;
-
-            case '6': echo "Você selecionou as Informações. \n"; mostre_informacoes(); break;
-            
-            case '7': echo "Você selecionou o Histórico. \n"; visualize_historico(); break;
             
             case '0': echo "Você selecionou Sair. \n"; die; break;
             
             default: echo "*OPÇÃO INVÁLIDA* \n"; menu_loterias(); break;
         }
-    }
-
-    function sorteio()
-    {
-        #blabla
     }
 
     function menu_selecao()
@@ -169,8 +153,7 @@
 
         echo "+==============================+ \n";
         echo " Escolha o que deseja: \n\n";
-        echo " 1. Escolher Números. \n";
-        echo " 2. Surpresinha. \n\n";
+        echo " 1. Surpresinha. \n\n";
         echo " 0. VOLTAR.\n\n";
         echo "+==============================+ \n";
 
@@ -178,9 +161,7 @@
 
         switch($opcoes)
         {
-            case '1': "Você selecionou Escolher Números. \n"; $modo = "manual"; verifique_dezenas(); break;
-            
-            case '2': "Você selecionou Sortear Surpresinha. \n"; $modo = "surpresinha" ;verifique_dezenas(); break;
+            case '1': "Você selecionou Sortear Surpresinha. \n"; $modo = "surpresinha" ;verifique_dezenas(); break;
             
             case '0': "Você selecionou Voltar. \n"; menu_loterias(); break;
             
@@ -232,73 +213,6 @@
         }
     }
 
-    function mostre_informacoes()
-    {
-        echo "+==============================+ \n";
-        echo " INFORMAÇÕES: \n\n";
-        echo "+==============================+ \n";
-
-    }
-
-    function visualize_historico()
-    {
-        echo "+==============================+ \n";
-        echo " HISTÓRICO (QUANTIDADE). \n\n";
-        echo " Surpresinhas geradas: \n"; 
-        echo "\t Mega-Sena: \n";
-        echo "\t Quina: \n";
-        echo "\t Lotomania: \n";
-        echo "\t Lotofácil: \n";
-        echo "\t TOTAL: \n";
-        echo "\n ------------------------------ \n";
-        echo " Apostas manuais feitas: \n"; 
-        echo "\t Mega-Sena: \n";
-        echo "\t Quina: \n";
-        echo "\t Lotomania: \n";
-        echo "\t Lotofácil: \n";
-        echo "\t TOTAL: \n";
-        echo "\n ------------------------------ \n";
-        echo " Apostas compradas: \n";
-        echo "\t Mega-Sena: \n";
-        echo "\t Quina: \n";
-        echo "\t Lotomania: \n";
-        echo "\t Lotofácil: \n";
-        echo "\t TOTAL: \n";
-        echo "\n ------------------------------ \n";
-        echo " Sorteios realizados: \n";
-        echo "\t Mega-Sena: \n";
-        echo "\t Quina: \n";
-        echo "\t Lotomania: \n";
-        echo "\t Lotofácil: \n";
-        echo "\t TOTAL: \n";
-        echo "\n ------------------------------ \n";
-        echo " Sorteios ganhos: \n";
-        echo "\t Mega-Sena: \n";
-        echo "\t Quina: \n";
-        echo "\t Lotomania: \n";
-        echo "\t Lotofácil: \n";
-        echo "\t TOTAL: \n";
-        echo "\n ------------------------------ \n";
-        echo " Valor gasto: \n";
-        echo "\t Mega-Sena: \n";
-        echo "\t Quina: \n";
-        echo "\t Lotomania: \n";
-        echo "\t Lotofácil: \n";
-        echo "\t TOTAL: \n";
-        echo "\n ------------------------------ \n";
-        echo " DIGITE QUALQUER TECLA PARA SAIR\n\n";
-        echo "+==============================+ \n";
-
-        $sair = readline("");
-
-        menu_loterias();
-    }
-
-    function escolha_numeros()
-    {
-        
-    }
-
     function sorteie_surpresinha()
     {
         global $loteria, $surpresinha, $surpresa, $dezena;
@@ -345,22 +259,6 @@
         {
             $lista[$key] = "";
         }
-    }
-
-    function escreva_tabela(bool $voltar, string $titulo, string ...$linhas)
-    {
-        echo "+==============================+ \n";
-        echo " $titulo: \n\n";
-        
-        foreach($linhas as $num => $linha)
-        {
-            echo " " . $num+1 . ". $linha \n";
-        }
-
-        echo "\n"; echo $voltar ? " 0. VOLTAR" : " 0. SAIR"; echo "\n\n";
-
-        echo "+==============================+ \n";
-
     }
 
 ?>
